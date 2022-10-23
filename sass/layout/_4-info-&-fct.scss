@@ -1,0 +1,40 @@
+.info {
+    @include flexcolumn-0-center;
+    background-color: $color-fifth;
+    & h3, p {text-align: center;}
+    & h3 {margin: 40px 60px 20px 60px;}
+    }
+
+.fct {@include marges-int}
+
+.fct-list li {
+    @include flexrow-0-center;
+    margin-bottom: 25px;
+    position: relative;}
+
+.fct-btn-number {
+    @include flexrow-center-center;
+    height: 26px;
+    width: 26px;
+    border-radius: 13px;
+    background-color: $color-first;
+    color: white;
+    position: absolute;
+}
+
+.fct-btn {
+    @include flexrow-0-center;
+    background-color: $color-fifth;
+    height: 75px;
+    width: 100%;
+    border: none; 
+    border-radius: 25px;
+    margin: 0 0 0 13px;
+    @include shadow-button;
+    cursor: pointer;
+    & :hover {
+
+    }
+    }
+
+.fct-btn-icon {padding: 0 20px;}

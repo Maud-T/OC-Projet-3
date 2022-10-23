@@ -1,0 +1,45 @@
+.resto {
+    background-color: $color-fifth;
+    @include marges-int;}
+
+.resto-card {
+    @include flexcolumn-0-center;
+    width: 100%;
+    max-height: 255px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 20px;
+    @include shadow-button;
+    }
+
+.resto-card-img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;}
+
+.resto-card-caption {
+    @include flexrow-spacebetween-center;
+    width: 90%;
+    height: 78px;}
+
+.resto-card h5 {margin-bottom: 2;}
+
+.resto-card-txt p {margin-top: 0;}
+
+.resto-card-icon {}
+
+.resto-card-new {position: relative;}
+
+.new {
+    @include flexrow-center-center;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background-color: $color-third;
+    color: darken($color: $color-third, $amount: 30);
+    height: 30px;
+    width: 80px;
+    font-size: 90%;
+    font-weight: bold;}
+

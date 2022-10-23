@@ -1,0 +1,25 @@
+footer {
+    background-color: $color-fourth;
+    color: white;
+    height: 200px;
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.5;
+    }
+    
+    h6, ul {
+        margin: 0;}
+    
+    h6 {
+        font-size:120%;
+        font-weight: lighter;
+        margin-bottom: 20px;}
+    
+    footer a {color: white;}
+
+    .fa-utensils, .fa-handshake-angle {font-size: 85%;}
+
+    .fa-utensils {margin-right: 11px;}
+    .fa-handshake-angle {margin-right: 5px;}

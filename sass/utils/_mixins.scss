@@ -1,0 +1,53 @@
+@mixin marges-g-dr {margin: 0 20px;}
+
+@mixin marges-int {padding: 30px 20px 30px 20px;}
+
+// FLEXBOX
+
+@mixin flexcolumn-0-center {
+    display:flex;
+    flex-direction: column;
+    align-items: center;}
+
+@mixin flexcolumn-center-center {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;}
+
+@mixin flexcolumn-spacebetween-center {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;}
+
+@mixin flexcolumn-spacebetween-0 {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;}
+
+@mixin flexrow-0-center {
+    display:flex;
+    align-items: center;}
+        
+@mixin flexrow-center-center {
+    display:flex;
+    justify-content: center;
+    align-items: center;}
+
+@mixin flexrow-spacebetween-0 {
+    display:flex;
+    justify-content: space-between;}
+
+@mixin flexrow-spacebetween-center {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;}
+
+// OMBRES
+
+@mixin shadow-header {
+    box-shadow: inset 0px 3px 8px -6px $color-fourth;}
+
+@mixin shadow-button {
+    box-shadow: 4px 4px 8px #CCCCCC;}

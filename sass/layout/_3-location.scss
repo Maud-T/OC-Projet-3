@@ -1,0 +1,12 @@
+.location {
+    @include flexrow-center-center;
+    @include shadow-header; 
+    background-color: #EAEAEA;
+    height: 50px;}   
+
+.location-search {
+    border: none;
+    background-color: transparent;
+    padding-left: 20px;
+    width: 160px; 
+    color: $color-fourth;}
