@@ -20,6 +20,7 @@
     background-color: $color-first;
     color: white;
     position: absolute;
+    z-index: 2;
 }
 
 .fct-btn {
@@ -32,9 +33,12 @@
     margin: 0 0 0 13px;
     @include shadow-button;
     cursor: pointer;
-    & :hover {
-
+    &:hover {
+        & .fct-btn-icon {color: $color-first;}
+        @include shadow-button-hover;
+        background-color: lighten($color-second, 23);
+        transition: all 500ms;
+        }
     }
-    }
-
+    
 .fct-btn-icon {padding: 0 20px;}

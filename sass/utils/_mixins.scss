@@ -51,3 +51,14 @@
 
 @mixin shadow-button {
     box-shadow: 4px 4px 8px #CCCCCC;}
+
+@mixin shadow-button-hover {
+    box-shadow: 4px 4px 8px darken(#CCCCCC, 25)}
+
+// BREAKPOINTS 
+
+@mixin tablet {
+    @media screen and (min-width: 769px) and (max-width: 991px) {@content;}}
+
+@mixin desktop {
+    @media screen and (min-width: 992px) {@content};}

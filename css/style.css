@@ -90,6 +90,7 @@ p {
   background: radial-gradient(ellipse farthest-corner at 30% 0%, #FF79DA, 75%, #9356DC);
   box-shadow: 4px 4px 8px #CCCCCC;
   cursor: pointer;
+  transition: all 2000ms;
 }
 
 header {
@@ -156,6 +157,7 @@ header {
   background-color: #9356DC;
   color: white;
   position: absolute;
+  z-index: 2;
 }
 
 .fct-btn {
@@ -170,6 +172,15 @@ header {
   box-shadow: 4px 4px 8px #CCCCCC;
   cursor: pointer;
 }
+.fct-btn:hover {
+  box-shadow: 4px 4px 8px #8c8c8c;
+  background-color: #ffeefa;
+  transition: all 500ms;
+}
+.fct-btn:hover .fct-btn-icon {
+  color: #9356DC;
+}
+
 .fct-btn-icon {
   padding: 0 20px;
 }
@@ -256,6 +267,10 @@ h6 {
 
 footer a {
   color: white;
+}
+footer a:hover {
+  color: #9356DC;
+  transition: color 0.25s;
 }
 
 .fa-utensils, .fa-handshake-angle {
