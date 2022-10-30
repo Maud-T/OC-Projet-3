@@ -35,8 +35,8 @@
     cursor: pointer;
     &:hover {
         & .fct-btn-icon {color: $color-first;}
-        @include shadow-button-hover;
         background-color: lighten($color-second, 23);
+        @include shadow-button-hover;
         transition: all 500ms;
         }
     }

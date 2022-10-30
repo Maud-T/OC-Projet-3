@@ -43,12 +43,16 @@ p {font-weight: lighter;}
 // ICONES
 
 .arrow {font-size: 150%;}
+
 .fa-location-dot {color: $color-fourth;}
-.fa-heart {
-    font-weight: lighter;
-    font-size: 175%;}
 
 .fct-btn-icon {
     color: $color-fourth;
     font-size: 125%;;
     }
+
+.fa-heart {
+    font-weight: lighter;
+    font-size: 175%;}
+
+.heart-full {color: $color-fifth;}

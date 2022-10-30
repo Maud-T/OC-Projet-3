@@ -5,3 +5,9 @@ $color-second: #FF79DA;     // rose
 $color-third: #99E2D0;      // turquoize
 $color-fourth: #353535;     // gris foncé
 $color-fifth: #F6F6F6;      // gris clair
+
+$color-first-lighten: lighten($color-first, 4%);
+$color-second-lighten: lighten($color-second, 4%);
+
+$color-shading: radial-gradient(ellipse farthest-corner at 30% 0%, $color-second, 75%, $color-first);
+$color-shading-lighten: radial-gradient(ellipse farthest-corner at 30% 0%, $color-second-lighten, 75%, $color-first-lighten); 

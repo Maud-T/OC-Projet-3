@@ -70,14 +70,23 @@ p {
   color: #353535;
 }
 
+.fct-btn-icon {
+  color: #353535;
+  font-size: 125%;
+}
+
 .fa-heart {
   font-weight: lighter;
   font-size: 175%;
 }
 
-.fct-btn-icon {
-  color: #353535;
-  font-size: 125%;
+.heart-full {
+  color: #F6F6F6;
+}
+
+button {
+  cursor: pointer;
+  box-shadow: 4px 4px 8px #CCCCCC;
 }
 
 .btn-multicolor button {
@@ -88,9 +97,11 @@ p {
   font-weight: bold;
   color: white;
   background: radial-gradient(ellipse farthest-corner at 30% 0%, #FF79DA, 75%, #9356DC);
-  box-shadow: 4px 4px 8px #CCCCCC;
-  cursor: pointer;
-  transition: all 2000ms;
+  transition: all 500ms;
+}
+.btn-multicolor button:hover {
+  background: radial-gradient(ellipse farthest-corner at 30% 0%, #ff8de0, 75%, #9e67e0);
+  box-shadow: 4px 4px 8px #8c8c8c;
 }
 
 header {
@@ -173,8 +184,8 @@ header {
   cursor: pointer;
 }
 .fct-btn:hover {
-  box-shadow: 4px 4px 8px #8c8c8c;
   background-color: #ffeefa;
+  box-shadow: 4px 4px 8px #8c8c8c;
   transition: all 500ms;
 }
 .fct-btn:hover .fct-btn-icon {
@@ -204,7 +215,7 @@ header {
 
 .resto-card-img {
   width: 100%;
-  height: 70%;
+  height: 175px;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
@@ -237,11 +248,24 @@ header {
   right: 15px;
   top: 15px;
   background-color: #99E2D0;
-  color: #32b091;
+  color: #217460;
   height: 30px;
   width: 80px;
   font-size: 90%;
   font-weight: bold;
+}
+
+.heart-empty {
+  position: absolute;
+}
+
+.heart-full {
+  position: absolute;
+  color: transparent;
+}
+
+.resto-card:hover .heart-full {
+  color: aqua;
 }
 
 footer {

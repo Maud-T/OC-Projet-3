@@ -1,3 +1,7 @@
+button {
+    cursor: pointer;
+    @include shadow-button;}
+
 .btn-multicolor button {
     height: 50px;
     padding: 0 40px;
@@ -5,10 +9,11 @@
     border-radius: 25px;
     font-weight: bold;
     color: white;
-    background: radial-gradient(ellipse farthest-corner at 30% 0%, $color-second, 75%, $color-first);
-    @include shadow-button;
-    cursor: pointer;
-    transition: all 2000ms;
+    background: $color-shading;
+    transition: all 500ms;
+    &:hover {
+        background: $color-shading-lighten;
+        @include shadow-button-hover;}
     }
 
-// BOUTONS FONCTIONNEMENT
+// BOUTONS RESTOS
