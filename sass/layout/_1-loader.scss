@@ -1,0 +1,17 @@
+.loader {
+    @include flexrow-center-center;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background-color: $color-fifth;
+    animation: loader-disappear 1s 2s ease-in-out forwards;}
+
+.loader__circle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 15px dotted $color-first;
+    border-radius: 50%;
+
+}
