@@ -1,6 +1,6 @@
-button {
-    cursor: pointer;
-    @include shadow-button;}
+button {cursor: pointer;}
+
+/* BOUTON MULTI-COLOR : Explorer et Commander */  
 
 .btn-multicolor button {
     height: 50px;
@@ -10,10 +10,39 @@ button {
     font-weight: bold;
     color: white;
     background: $color-shading;
+    @include shadow-button;
     transition: all 500ms;
     &:hover {
         background: $color-shading-lighten;
         @include shadow-button-hover;}
     }
 
-// BOUTONS RESTOS
+/* BOUTON COEUR */  
+
+.heart-empty {
+    position: absolute;
+    opacity: 1;
+    transition: all 500ms;
+    }
+
+.heart-full {
+    position : relative;
+    background: $color-shading;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 0;
+    transition: all 500ms;
+    }
+    
+.resto-card-icon {
+    border: none;
+    background-color: transparent;
+    transition: all 500ms;
+    &:hover  {
+        transition: all 500ms;
+        & .heart-empty {opacity: 0;}
+        & .heart-full {opacity: 1;}
+    }
+    
+           }

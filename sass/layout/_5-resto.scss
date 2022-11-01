@@ -10,6 +10,13 @@
     background-color: white;
     border-radius: 20px;
     @include shadow-button;
+    transition: all 500ms;
+    &:hover {
+        color: $color-first;
+        background-color: $color-fifth;
+        background-color: lighten($color-second, 23);
+        @include shadow-button-hover;
+        }
     }
 
 .resto-card-img {
@@ -41,16 +48,5 @@
     font-size: 90%;
     font-weight: bold;}
 
-.heart-empty {position: absolute;}
-
-.heart-full {
-    position: absolute;
-    color: transparent;}
-
-.resto-card {
-    &:hover {
-    & .heart-full {color: aqua;}
-    }
-}
 
 

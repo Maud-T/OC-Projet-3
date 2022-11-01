@@ -2,7 +2,7 @@
 
 @mixin marges-int {padding: 30px 20px 30px 20px;}
 
-// FLEXBOX
+/* FLEXBOX */
 
 @mixin flexcolumn-0-center {
     display:flex;
@@ -44,7 +44,7 @@
     justify-content: space-between;
     align-items: center;}
 
-// OMBRES
+/* OMBRES */
 
 @mixin shadow-header {
     box-shadow: inset 0px 3px 8px -6px $color-fourth;}
@@ -55,7 +55,7 @@
 @mixin shadow-button-hover {
     box-shadow: 4px 4px 8px darken(#CCCCCC, 25)}
 
-// BREAKPOINTS 
+/* BREAKPOINTS */
 
 @mixin tablet {
     @media screen and (min-width: 769px) and (max-width: 991px) {@content;}}
