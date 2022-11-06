@@ -1,19 +1,25 @@
 // APPARITION DES ELEMENTS DES MENUS
 
 @keyframes menu-appear {
-    0% {
+    0%{
         opacity: 0;
         transform: translateY(15px);}
-    100% {
+    100%{
         opacity: 1;
         transform: translateY(0);}
 }
 
 // LOADING SPINNER
 
+
+
 @keyframes loader-anim {
-    0% {width: 0%;}
-    100% {width: 100%;}
+    0% {
+        transform: rotate(0deg);
+        }
+    100% {
+        transform: rotate(360deg);
+        }
 }
 
 @keyframes loader-disappear {
