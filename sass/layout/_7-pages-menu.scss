@@ -13,33 +13,33 @@
     @include marges-int;
     padding-top: 10px;
     position: relative;
-    margin-top: -40px;}
+    margin-top: -40px;
+    h5, p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;}
+    h5 {margin: 5px 0;}
+    p {margin: 0;}
+    }
 
 .menu-title-1 {
     @include flexrow-spacebetween-center;
-    & .resto-card-icon {padding-right: 10px;}
+    & .resto-card-icon {padding-right: 10px;}}
 
-    
-    }
+.menu-list-main {
+    @include desktop {@include flexrow-spacebetween-0;}}
+
+.menu-list-second {
+    @include desktop {width: 31%;}}
 
 .menu-title-2 h4 {margin-bottom: 10px;}
 
 .title-line {
     width: 40px;
     border: 2px solid $color-third;
-    margin-bottom: 20px;
-} 
+    margin-bottom: 20px;} 
 
 /* MENUS  */
-
-h5, p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;}
-    
-h5 {margin: 5px 0;}
-
-p {margin: 0;}
 
 .menu-dish {
     @include flexcolumn-spacebetween-0;

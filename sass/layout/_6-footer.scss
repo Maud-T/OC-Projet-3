@@ -3,25 +3,30 @@ footer {
     color: white;
     height: 200px;
     padding-left: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include flexcolumn-center-0;
     line-height: 1.5;
-    }
-    
-    h6, ul {
-        margin: 0;}
-    
+    @include tablet {
+        height: 75px;
+        @include flexrow-center-center;
+        padding-left: 0;}
+    h6, ul {margin: 0;}
+    ul {@include tablet {@include flexrow-0-center;};}
+    li {
+        @include tablet {margin: 0 10px;}
+        @include desktop {margin: 0 25px;}}
     h6 {
         font-size:120%;
         font-weight: lighter;
-        margin-bottom: 20px;}
-    
-    footer a {color: white;
+        margin-bottom: 20px;
+        @include tablet {margin: 10px;}
+        @include desktop {margin: 0 25px;}
+        }
+    a {color: white;
         &:hover {
             color: $color-first;
             transition: color 0.25s;}
         }
+    }
 
     .fa-utensils, .fa-handshake-angle {font-size: 85%;}
 

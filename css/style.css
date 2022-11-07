@@ -169,6 +169,7 @@ button {
 
 .loader {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -215,6 +216,7 @@ header {
 
 .location {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   box-shadow: inset 0px 3px 8px -6px #353535;
@@ -238,6 +240,7 @@ header {
 }
 .info h3, .info p {
   text-align: center;
+  margin: 0 20px;
 }
 .info h3 {
   margin: 40px 60px 20px 60px;
@@ -249,13 +252,28 @@ header {
 
 .fct-list li {
   display: flex;
+  flex-direction: row;
   align-items: center;
   margin-bottom: 25px;
   position: relative;
 }
+@media screen and (min-width: 769px) {
+  .fct-list li {
+    width: 32%;
+  }
+}
+@media screen and (min-width: 769px) {
+  .fct-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 
 .fct-btn-number {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 26px;
@@ -269,6 +287,7 @@ header {
 
 .fct-btn {
   display: flex;
+  flex-direction: row;
   align-items: center;
   background-color: #F6F6F6;
   height: 75px;
@@ -279,6 +298,13 @@ header {
   box-shadow: 4px 4px 8px #CCCCCC;
   cursor: pointer;
 }
+.fct-btn .fct-btn-icon {
+  padding: 0 20px;
+}
+.fct-btn p {
+  margin-right: 20px;
+  text-align: left;
+}
 .fct-btn:hover {
   background-color: #ffeefa;
   box-shadow: 4px 4px 8px #8c8c8c;
@@ -288,13 +314,22 @@ header {
   color: #9356DC;
 }
 
-.fct-btn-icon {
-  padding: 0 20px;
-}
-
 .resto {
   background-color: #F6F6F6;
   padding: 30px 20px 30px 20px;
+}
+
+@media screen and (min-width: 769px) {
+  .resto-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .resto-cards a {
+    width: 49%;
+  }
 }
 
 .resto-card {
@@ -315,6 +350,9 @@ header {
   background-color: #ffeefa;
   box-shadow: 4px 4px 8px #8c8c8c;
 }
+.resto-card h5, .resto-card p {
+  margin: 6px 0;
+}
 
 .resto-card-img {
   width: 100%;
@@ -325,18 +363,11 @@ header {
 
 .resto-card-caption {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 90%;
   height: 78px;
-}
-
-.resto-card h5 {
-  margin-bottom: 2;
-}
-
-.resto-card-txt p {
-  margin-top: 0;
 }
 
 .resto-card-new {
@@ -345,6 +376,7 @@ header {
 
 .new {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -368,17 +400,51 @@ footer {
   justify-content: center;
   line-height: 1.5;
 }
-
-h6, ul {
+@media screen and (min-width: 769px) {
+  footer {
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+  }
+}
+footer h6, footer ul {
   margin: 0;
 }
-
-h6 {
+@media screen and (min-width: 769px) {
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 769px) {
+  footer li {
+    margin: 0 10px;
+  }
+}
+@media screen and (min-width: 992px) {
+  footer li {
+    margin: 0 25px;
+  }
+}
+footer h6 {
   font-size: 120%;
   font-weight: lighter;
   margin-bottom: 20px;
 }
-
+@media screen and (min-width: 769px) {
+  footer h6 {
+    margin: 10px;
+  }
+}
+@media screen and (min-width: 992px) {
+  footer h6 {
+    margin: 0 25px;
+  }
+}
 footer a {
   color: white;
 }
@@ -417,14 +483,40 @@ footer a:hover {
   position: relative;
   margin-top: -40px;
 }
+.menu h5, .menu p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu h5 {
+  margin: 5px 0;
+}
+.menu p {
+  margin: 0;
+}
 
 .menu-title-1 {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 .menu-title-1 .resto-card-icon {
   padding-right: 10px;
+}
+
+@media screen and (min-width: 992px) {
+  .menu-list-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .menu-list-second {
+    width: 31%;
+  }
 }
 
 .menu-title-2 h4 {
@@ -438,20 +530,6 @@ footer a:hover {
 }
 
 /* MENUS  */
-h5, p {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-h5 {
-  margin: 5px 0;
-}
-
-p {
-  margin: 0;
-}
-
 .menu-dish {
   display: flex;
   flex-direction: column;
@@ -480,6 +558,7 @@ p {
 
 .dish-check {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: #99E2D0;
@@ -501,6 +580,7 @@ p {
 
 .dish-line-2 {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
@@ -512,6 +592,7 @@ p {
 /* BOUTON COMMANDER */
 .btn-multicolor {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   margin: 30px 0 45px 0;

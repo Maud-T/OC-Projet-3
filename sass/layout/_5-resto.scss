@@ -1,6 +1,14 @@
 .resto {
     background-color: $color-fifth;
-    @include marges-int;}
+    @include marges-int;
+}
+
+.resto-cards {
+    @include tablet {
+        @include flexrow-spacebetween-center;
+        flex-wrap: wrap;
+        a {width: 49%;}}
+    }
 
 .resto-card {
     @include flexcolumn-0-center;
@@ -17,6 +25,7 @@
         background-color: lighten($color-second, 23);
         @include shadow-button-hover;
         }
+    h5, p {margin: 6px 0;}
     }
 
 .resto-card-img {
@@ -29,10 +38,6 @@
     @include flexrow-spacebetween-center;
     width: 90%;
     height: 78px;}
-
-.resto-card h5 {margin-bottom: 2;}
-
-.resto-card-txt p {margin-top: 0;}
 
 .resto-card-new {position: relative;}
 
