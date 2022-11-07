@@ -97,6 +97,18 @@ p {
     transform: translateY(0);
   }
 }
+.delay1 {
+  animation: menu-appear 500ms ease-out both;
+}
+
+.delay2 {
+  animation: menu-appear 1000ms ease-out both;
+}
+
+.delay3 {
+  animation: menu-appear 1500ms ease-out both;
+}
+
 @keyframes loader-anim {
   0% {
     transform: rotate(0deg);
@@ -541,7 +553,6 @@ footer a:hover {
   padding: 10px 20px;
   margin-bottom: 15px;
   cursor: pointer;
-  animation: menu-appear 1.5s ease-in-out both;
   position: relative;
   overflow: hidden;
   transition: padding-right 500ms;
