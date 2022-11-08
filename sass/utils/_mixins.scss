@@ -69,13 +69,24 @@
 @mixin shadow-button-hover {
     box-shadow: 4px 4px 8px darken(#CCCCCC, 25)}
 
+/* BOUTON Fonctionnement & Plats */
+
+@mixin btn-main {
+    background-color: lighten($color-second, 23);
+    @include shadow-button-hover;
+    transition: all 500ms;
+    }
+
 /* BREAKPOINTS */
 
+@mixin mobile-et-tablet {
+    @media screen and (max-width: $width-min-dektop) {@content;}}
+
 @mixin tablet {
-    @media screen and (min-width: 769px) {@content;}}
+    @media screen and (min-width: $width-min-tablet) {@content;}}
 
 @mixin tablet-only {
-    @media screen and (min-width: 769px) and (max-width: 991px) {@content;}}
+    @media screen and (min-width: $width-min-tablet) and (max-width: $width-min-dektop) {@content;}}
 
 @mixin desktop {
-    @media screen and (min-width: 992px) {@content};}
+    @media screen and (min-width: $width-min-dektop) {@content};}

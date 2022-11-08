@@ -21,10 +21,7 @@
     transition: all 500ms;
     &:hover {
         color: $color-first;
-        background-color: $color-fifth;
-        background-color: lighten($color-second, 23);
-        @include shadow-button-hover;
-        }
+        @include btn-main;}
     h5, p {margin: 6px 0;}
     }
 
@@ -52,6 +49,3 @@
     width: 80px;
     font-size: 90%;
     font-weight: bold;}
-
-
-

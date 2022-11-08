@@ -1,5 +1,6 @@
 /* FLEXBOX */
 /* OMBRES */
+/* BOUTON Fonctionnement & Plats */
 /* BREAKPOINTS */
 * {
   box-sizing: border-box;
@@ -83,10 +84,6 @@ p {
   font-size: 175%;
 }
 
-.heart-full {
-  color: radial-gradient(ellipse farthest-corner at 30% 0%, #FF79DA, 75%, #9356DC);
-}
-
 @keyframes menu-appear {
   0% {
     opacity: 0;
@@ -151,32 +148,29 @@ button {
 .heart-empty {
   position: absolute;
   opacity: 1;
-  transition: all 500ms;
+  transition: all 1000ms ease-out;
 }
 
 .heart-full {
   position: relative;
+  color: transparent;
   background: radial-gradient(ellipse farthest-corner at 30% 0%, #FF79DA, 75%, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
   opacity: 0;
-  transition: all 500ms;
+  transition: all 1000ms ease-out;
 }
 
-.resto-card-icon {
-  border: none;
-  background-color: transparent;
-  transition: all 500ms;
-}
-.resto-card-icon:hover {
-  transition: all 500ms;
-}
-.resto-card-icon:hover .heart-empty {
-  opacity: 0;
-}
-.resto-card-icon:hover .heart-full {
-  opacity: 1;
+@media screen and (min-width: 992px) {
+  .resto-card-icon {
+    cursor: pointer;
+  }
+  .resto-card-icon:hover .heart-empty {
+    opacity: 0;
+  }
+  .resto-card-icon:hover .heart-full {
+    opacity: 1;
+  }
 }
 
 .loader {
@@ -215,6 +209,7 @@ button {
 
 header {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: baseline;
   height: 65px;
@@ -224,6 +219,9 @@ header {
   position: absolute;
   left: 20px;
   top: 25px;
+}
+.arrow :hover {
+  color: #9356DC;
 }
 
 .location {
@@ -313,7 +311,8 @@ header {
 .fct-btn .fct-btn-icon {
   padding: 0 20px;
 }
-.fct-btn p {
+.fct-btn .fct-btn-txt {
+  font-weight: bold;
   margin-right: 20px;
   text-align: left;
 }
@@ -358,9 +357,9 @@ header {
 }
 .resto-card:hover {
   color: #9356DC;
-  background-color: #F6F6F6;
   background-color: #ffeefa;
   box-shadow: 4px 4px 8px #8c8c8c;
+  transition: all 500ms;
 }
 .resto-card h5, .resto-card p {
   margin: 6px 0;
@@ -557,14 +556,23 @@ footer a:hover {
   overflow: hidden;
   transition: padding-right 500ms;
 }
-.menu-dish:hover {
-  padding-right: 75px;
+@media screen and (max-width: 992px) {
+  .menu-dish:hover {
+    background-color: #ffeefa;
+    box-shadow: 4px 4px 8px #8c8c8c;
+    transition: all 500ms;
+  }
 }
-.menu-dish:hover > .dish-check {
-  transform: translate(-60px);
-}
-.menu-dish:hover .fa-circle-check {
-  transform: rotate(360deg);
+@media screen and (min-width: 992px) {
+  .menu-dish:hover {
+    padding-right: 75px;
+  }
+  .menu-dish:hover > .dish-check {
+    transform: translate(-60px);
+  }
+  .menu-dish:hover .fa-circle-check {
+    transform: rotate(360deg);
+  }
 }
 
 .dish-check {

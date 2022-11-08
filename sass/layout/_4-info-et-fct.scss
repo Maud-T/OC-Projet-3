@@ -41,14 +41,12 @@
     @include shadow-button;
     cursor: pointer;
     .fct-btn-icon {padding: 0 20px;}
-    p {
+    .fct-btn-txt {
+        font-weight: bold;
         margin-right: 20px;
         text-align: left;}
     &:hover {
         & .fct-btn-icon {color: $color-first;}
-        background-color: lighten($color-second, 23);
-        @include shadow-button-hover;
-        transition: all 500ms;
-        }
+        @include btn-main;}
     }
     

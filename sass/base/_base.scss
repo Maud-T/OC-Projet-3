@@ -1,5 +1,7 @@
 * {box-sizing: border-box;}
 
+// COULEURS
+
 $color-first: #9356DC;      // bleu
 $color-second: #FF79DA;     // rose
 $color-third: #99E2D0;      // turquoize
@@ -12,4 +14,9 @@ $color-second-lighten: lighten($color-second, 4%);
 $color-shading: radial-gradient(ellipse farthest-corner at 30% 0%, $color-second, 75%, $color-first);
 $color-shading-lighten: radial-gradient(ellipse farthest-corner at 30% 0%, $color-second-lighten, 75%, $color-first-lighten);
 
-$color-loader: linear-gradient(to right, $color-first, $color-second); 
+$color-loader: linear-gradient(to right, $color-first, $color-second);
+
+// DIMENSIONS ECRANS
+
+$width-min-tablet: 769px;
+$width-min-dektop: 992px;

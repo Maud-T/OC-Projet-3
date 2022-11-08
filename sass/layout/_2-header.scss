@@ -1,13 +1,12 @@
 header {
-    display: flex;
-    justify-content: center;
+    @include flexrow-center-0;
     align-items: baseline;
-    height: 65px;
-    
+    height: 65px;  
 }
 
 .arrow {
     position: absolute;
     left: 20px;
     top : 25px;
+    :hover {color: $color-first;}
 }

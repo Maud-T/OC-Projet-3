@@ -1,5 +1,7 @@
 button {cursor: pointer;}
 
+// BOUTONS Fonctionnement & Plats > mixin
+
 /* BOUTON MULTI-COLOR : Explorer et Commander */  
 
 .btn-multicolor button {
@@ -22,27 +24,25 @@ button {cursor: pointer;}
 .heart-empty {
     position: absolute;
     opacity: 1;
-    transition: all 500ms;
+    transition: all 1000ms ease-out;
     }
 
 .heart-full {
-    position : relative;
+    position: relative;
+    color: transparent;
     background: $color-shading;
     background-clip: text;
     -webkit-background-clip: text;
-    color: transparent;
     opacity: 0;
-    transition: all 500ms;
+    transition: all 1000ms ease-out;
     }
     
 .resto-card-icon {
-    border: none;
-    background-color: transparent;
-    transition: all 500ms;
-    &:hover  {
-        transition: all 500ms;
-        & .heart-empty {opacity: 0;}
-        & .heart-full {opacity: 1;}
+    @include desktop {
+        cursor: pointer;
+        &:hover  {
+            & .heart-empty {opacity: 0;}
+            & .heart-full {opacity: 1;}
+            }
+        }
     }
-    
-           }
