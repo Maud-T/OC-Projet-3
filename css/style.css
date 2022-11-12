@@ -365,6 +365,9 @@ header {
   box-shadow: 4px 4px 8px #8c8c8c;
   transition: all 500ms;
 }
+.resto-card:hover .resto-card-img {
+  opacity: 0.75;
+}
 .resto-card h5, .resto-card p {
   margin: 6px 0;
 }
@@ -387,6 +390,7 @@ header {
 
 .resto-card-new {
   position: relative;
+  z-index: 1;
 }
 
 .new {
@@ -540,7 +544,7 @@ footer a:hover {
 
 .title-line {
   width: 40px;
-  border: 2px solid #99E2D0;
+  border-bottom: 2px solid #99E2D0;
   margin-bottom: 20px;
 }
 

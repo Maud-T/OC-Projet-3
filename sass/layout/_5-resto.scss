@@ -21,7 +21,8 @@
     transition: all 500ms;
     &:hover {
         color: $color-first;
-        @include btn-main;}
+        @include btn-main;
+        & .resto-card-img {opacity: 0.75}}
     h5, p {margin: 6px 0;}
     }
 
@@ -36,7 +37,9 @@
     width: 90%;
     height: 78px;}
 
-.resto-card-new {position: relative;}
+.resto-card-new {
+    position: relative;
+    z-index: +1;}
 
 .new {
     @include flexrow-center-center;
