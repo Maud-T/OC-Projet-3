@@ -1,13 +1,13 @@
 .resto {
     background-color: $color-fifth;
-    @include marges-int;
-}
+    @include marges-int;}
 
 .resto-cards {
     @include tablet {
         @include flexrow-spacebetween-center;
         flex-wrap: wrap;
-        a {width: 49%;}}
+        a {width: 49%;}
+        }
     }
 
 .resto-card {
@@ -18,11 +18,14 @@
     background-color: white;
     border-radius: 20px;
     @include shadow-button;
-    transition: all 500ms;
+    transition: all 500ms ease-out;
     &:hover {
         color: $color-first;
         @include btn-main;
-        & .resto-card-img {opacity: 0.75}}
+        .resto-card-img {
+            opacity: 0.75;
+            transition : opacity 500ms ease-out;}
+        }
     h5, p {margin: 6px 0;}
     }
 

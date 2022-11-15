@@ -14,9 +14,7 @@ $color-second-lighten: lighten($color-second, 4%);
 $color-shading: radial-gradient(ellipse farthest-corner at 30% 0%, $color-second, 75%, $color-first);
 $color-shading-lighten: radial-gradient(ellipse farthest-corner at 30% 0%, $color-second-lighten, 75%, $color-first-lighten);
 
-$color-loader: linear-gradient(to right, $color-first, $color-second);
-
 // DIMENSIONS ECRANS
 
 $width-min-tablet: 769px;
-$width-min-dektop: 992px;
+$width-min-desktop: 992px;

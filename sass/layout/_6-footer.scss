@@ -10,7 +10,7 @@ footer {
         @include flexrow-center-center;
         padding-left: 0;}
     h6, ul {margin: 0;}
-    ul {@include tablet {@include flexrow-0-center;};}
+    ul {@include tablet {@include flexrow-0-center;}}
     li {
         @include tablet {margin: 0 10px;}
         @include desktop {margin: 0 25px;}}
@@ -24,7 +24,7 @@ footer {
     a {color: white;
         &:hover {
             color: $color-first;
-            transition: color 0.25s;}
+            transition: color 500ms;}
         }
     }
 

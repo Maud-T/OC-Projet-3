@@ -2,7 +2,7 @@
 
 @mixin marges-int {padding: 30px 20px 30px 20px;}
 
-/* FLEXBOX */
+// FLEXBOX 
 
 @mixin flexcolumn-0-center {
     display:flex;
@@ -58,7 +58,7 @@
     justify-content: space-between;
     align-items: center;}
 
-/* OMBRES */
+// OMBRES 
 
 @mixin shadow-header {
     box-shadow: inset 0px 3px 8px -6px $color-fourth;}
@@ -69,24 +69,23 @@
 @mixin shadow-button-hover {
     box-shadow: 4px 4px 8px darken(#CCCCCC, 25)}
 
-/* BOUTON Fonctionnement & Plats */
+// BOUTON Fonctionnement & Plats 
 
 @mixin btn-main {
     background-color: lighten($color-second, 23);
     @include shadow-button-hover;
-    transition: all 500ms;
-    }
+    transition: all 500ms ease-out;}
 
-/* BREAKPOINTS */
+// BREAKPOINTS 
 
 @mixin mobile-et-tablet {
-    @media screen and (max-width: $width-min-dektop) {@content;}}
+    @media screen and (max-width: $width-min-desktop) {@content;}}
 
 @mixin tablet {
     @media screen and (min-width: $width-min-tablet) {@content;}}
 
 @mixin tablet-only {
-    @media screen and (min-width: $width-min-tablet) and (max-width: $width-min-dektop) {@content;}}
+    @media screen and (min-width: $width-min-tablet) and (max-width: $width-min-desktop) {@content;}}
 
 @mixin desktop {
-    @media screen and (min-width: $width-min-dektop) {@content};}
+    @media screen and (min-width: $width-min-desktop) {@content};}

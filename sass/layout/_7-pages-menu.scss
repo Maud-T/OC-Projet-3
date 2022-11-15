@@ -59,9 +59,9 @@
             padding-right: 75px;
             > .dish-check {transform: translate(-60px);}
             .fa-circle-check {transform: rotate(360deg);}
+            }
         }
     }
-}
 
 .dish-check {
     @include flexrow-center-center;
@@ -73,14 +73,13 @@
     right: -50px;
     margin: -10px;
     transform: translate(0);
-    transition: transform 500ms;
+    transition: transform 500ms ease-out;
     & .fa-circle-check {
         color: white;
         font-size: 150%;
         transform: rotate(0);
-        transition: transform 500ms;
-    } 
-}
+        transition: transform 500ms;} 
+    }
 
 .dish-line-2 {@include flexrow-spacebetween-center;}
 

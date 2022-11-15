@@ -1,21 +1,19 @@
 .info {
     @include flexcolumn-0-center;
     background-color: $color-fifth;
-    & h3, p {
-        text-align: center;
-        margin: 0 20px;}
+    & h3, p {text-align: center;}
     & h3 {margin: 40px 60px 20px 60px;}
+    & p {margin: 0 20px;}
     }
 
-.fct {@include marges-int}
+.fct {@include marges-int;}
 
 .fct-list {
     li {
         @include flexrow-0-center;
         margin-bottom: 25px;
         position: relative;
-        @include tablet {width: 32%}
-        }
+        @include tablet {width: 32%;}}
     @include tablet {@include flexrow-spacebetween-center;}
     }
 
@@ -27,8 +25,7 @@
     background-color: $color-first;
     color: white;
     position: absolute;
-    z-index: 2;
-    }
+    z-index: 1;}
 
 .fct-btn {
     @include flexrow-0-center;
@@ -37,9 +34,7 @@
     width: 100%;
     border: none; 
     border-radius: 25px;
-    margin: 0 0 0 13px;
-    @include shadow-button;
-    cursor: pointer;
+    margin-left: 13px;
     .fct-btn-icon {padding: 0 20px;}
     .fct-btn-txt {
         font-weight: bold;
