@@ -14,7 +14,12 @@
     padding-top: 10px;
     position: relative;
     margin-top: -40px;
-    .dish-line-1 {margin: 5px 0;}
+    .dish-line-1 {
+        margin: 5px 0;
+        width: 100%;}
+    .dish-line-2 {
+        @include flexrow-spacebetween-0;
+        width: 100%;}
     .dish-line-2-txt {margin: 0;}
     .dish-line-1, .dish-line-2-txt {
         display: block;

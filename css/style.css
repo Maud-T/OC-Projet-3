@@ -537,6 +537,13 @@ footer a:hover {
 }
 .menu .dish-line-1 {
   margin: 5px 0;
+  width: 100%;
+}
+.menu .dish-line-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 .menu .dish-line-2-txt {
   margin: 0;
