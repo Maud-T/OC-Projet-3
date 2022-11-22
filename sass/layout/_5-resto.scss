@@ -6,7 +6,17 @@
     @include tablet {
         @include flexrow-spacebetween-center;
         flex-wrap: wrap;
-        a {width: 49%;}
+        & article {width: 49%;} 
+        }
+    }
+
+article {
+    position: relative;
+    & .resto-card-icon {
+        position: absolute;
+        bottom: 26px;
+        right: 15px;
+        @include tablet {bottom: 16%;}
         }
     }
 
@@ -36,9 +46,20 @@
     border-radius: 20px 20px 0 0;}
 
 .resto-card-caption {
-    @include flexrow-spacebetween-center;
-    width: 90%;
-    height: 78px;}
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 78px;
+    padding: 0 55px 0 20px;
+    & h5, p {
+        width: 100%;
+        margin: 3px 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;}
+    }
 
 .resto-card-new {
     position: relative;

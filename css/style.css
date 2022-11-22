@@ -352,8 +352,22 @@ header {
     align-items: center;
     flex-wrap: wrap;
   }
-  .resto-cards a {
+  .resto-cards article {
     width: 49%;
+  }
+}
+
+article {
+  position: relative;
+}
+article .resto-card-icon {
+  position: absolute;
+  bottom: 26px;
+  right: 15px;
+}
+@media screen and (min-width: 769px) {
+  article .resto-card-icon {
+    bottom: 16%;
   }
 }
 
@@ -392,11 +406,19 @@ header {
 
 .resto-card-caption {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
   height: 78px;
+  padding: 0 55px 0 20px;
+}
+.resto-card-caption h5, .resto-card-caption p {
+  width: 100%;
+  margin: 3px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .resto-card-new {
