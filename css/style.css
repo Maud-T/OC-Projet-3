@@ -24,7 +24,7 @@ h4 {
   font-weight: 350;
 }
 
-h5 {
+h5, .dish-line-1 {
   font-size: 120%;
 }
 
@@ -41,11 +41,11 @@ ul, a {
   color: black;
 }
 
-.prix {
+.dish-line-1, .prix {
   font-weight: bold;
 }
 
-p {
+p, .dish-line-2-txt {
   font-weight: lighter;
 }
 
@@ -146,30 +146,42 @@ button {
 
 /* BOUTON COEUR */
 .heart-empty {
+  display: block;
   position: absolute;
   opacity: 1;
   transition: all 500ms ease-out;
 }
 
 .heart-full {
+  display: block;
   position: relative;
+  z-index: 1;
+  opacity: 0;
   color: transparent;
   background: radial-gradient(ellipse farthest-corner at 30% 0%, #FF79DA, 75%, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
-  opacity: 0;
   transition: all 500ms ease-out;
 }
 
+.resto-card-icon {
+  background-color: transparent;
+  border: none;
+}
+@media screen and (max-width: 992px) {
+  .resto-card-icon:focus .heart-full {
+    opacity: 1;
+  }
+  .resto-card-icon:focus .heart-empty {
+    opacity: 0;
+  }
+}
 @media screen and (min-width: 992px) {
-  .resto-card-icon {
-    cursor: pointer;
+  .resto-card-icon:hover .heart-full {
+    opacity: 1;
   }
   .resto-card-icon:hover .heart-empty {
     opacity: 0;
-  }
-  .resto-card-icon:hover .heart-full {
-    opacity: 1;
   }
 }
 
@@ -501,16 +513,18 @@ footer a:hover {
   position: relative;
   margin-top: -40px;
 }
-.menu h5, .menu p {
+.menu .dish-line-1 {
+  margin: 5px 0;
+}
+.menu .dish-line-2-txt {
+  margin: 0;
+}
+.menu .dish-line-1, .menu .dish-line-2-txt {
+  display: block;
+  text-align: initial;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-.menu h5 {
-  margin: 5px 0;
-}
-.menu p {
-  margin: 0;
 }
 
 .menu-title-1 {
@@ -553,9 +567,11 @@ footer a:hover {
   flex-direction: column;
   justify-content: space-between;
   background-color: white;
+  border: none;
   border-radius: 20px;
   box-shadow: 4px 4px 8px #CCCCCC;
   height: 70px;
+  width: 100%;
   padding: 10px 20px;
   margin-bottom: 15px;
   cursor: pointer;
@@ -578,6 +594,17 @@ footer a:hover {
     transform: translate(-60px);
   }
   .menu-dish:hover .fa-circle-check {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 992px) {
+  .menu-dish:focus {
+    padding-right: 75px;
+  }
+  .menu-dish:focus > .dish-check {
+    transform: translate(-60px);
+  }
+  .menu-dish:focus .fa-circle-check {
     transform: rotate(360deg);
   }
 }
